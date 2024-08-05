@@ -1,0 +1,28 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .button-group {
+    margin-top: 20px;
+  }
+  
+  .select-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    margin: 10px; /* Some margin */
+    border: none; /* No borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer/hand icon */
+    font-size: 16px; /* Increase font size */
+  }
+  
+  .select-button:hover {
+    background-color: #45a049; /* Darker green */
+  }
+  
