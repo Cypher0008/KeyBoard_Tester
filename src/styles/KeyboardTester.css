@@ -1,6 +1,4 @@
 /* Container for the entire keyboard section */
-
-
 .keyboard-container {
     text-align: center;
     max-width: 1000px;  /* Adjusted to make sure the entire keyboard fits */
@@ -10,8 +8,6 @@
     border-radius: 10px;
     background-color: #f9f9f9;
 }
-
-
 
 /* Title styling */
 .keyboard-container h2 {
@@ -67,12 +63,30 @@
 .key.pressed {
     background-color: #76c7c0;
     border-color: #58a9a2;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Typing test section */
+.typing-test {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.typing-test textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing */
 }
 
 /* History section for showing pressed keys */
 .key-history {
     margin-top: 20px;
-    text-align: left;
+    text-align: center; /* Center align the history */
 }
 
 /* History title */
@@ -85,11 +99,19 @@
 .key-history ul {
     list-style-type: none;
     padding: 0;
+    display: flex; /* Change to flex to display items in a row */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    justify-content: center; /* Center align the items */
+    gap: 5px; /* Space between items */
 }
 
 .key-history ul li {
     font-size: 16px;
-    margin: 5px 0;
+    margin: 0; /* Remove vertical margins */
+    padding: 5px; /* Add padding for spacing */
+    border: 1px solid #ccc; /* Optional: border around each key */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #f0f0f0; /* Optional: background color for better visibility */
 }
 
 /* Specific styling for special keys */
