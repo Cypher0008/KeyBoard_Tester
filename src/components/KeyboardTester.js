@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/KeyboardTester.css';
 
+
 // Mac keyboard layout
 const macKeys = [
   ['Escape', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12'],
@@ -20,6 +21,8 @@ const windowsKeys = [
   ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ShiftRight'],
   ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ContextMenu', 'ControlRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'ArrowRight']
 ];
+
+
 
 // Mac key names for display
 const macKeyNames = {
@@ -44,6 +47,7 @@ const windowsKeyNames = {
   ControlLeft: 'Ctrl', MetaLeft: 'Win', AltLeft: 'Alt', Space: 'Space', AltRight: 'Alt', ContextMenu: 'Menu', ControlRight: 'Ctrl',
   ArrowLeft: '←', ArrowUp: '↑', ArrowDown: '↓', ArrowRight: '→'
 };
+
 
 const KeyboardTester = ({ layout }) => {
   const [pressedKeys, setPressedKeys] = useState({});
