@@ -1,28 +1,41 @@
+/* Welcome Page Styles */
 .welcome-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .button-group {
-    margin-top: 20px;
-  }
-  
-  .select-button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    margin: 10px; /* Some margin */
-    border: none; /* No borders */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer/hand icon */
-    font-size: 16px; /* Increase font size */
-  }
-  
-  .select-button:hover {
-    background-color: #45a049; /* Darker green */
-  }
-  
+  text-align: center;
+  padding: 50px;
+  cursor: default !important; /* Explicitly set cursor for welcome page */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Ensure no cursor visibility on all elements */
+.welcome-container * {
+  cursor: default !important; /* Use !important to enforce cursor settings */
+}
+
+/* Title styling */
+.welcome-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  user-select: none; /* Prevent text selection in the title */
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

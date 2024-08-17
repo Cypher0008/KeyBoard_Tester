@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/KeyboardTester.css';
 
+
 // Mac keyboard layout
 const macKeys = [
   ['Escape', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12'],
@@ -20,6 +21,8 @@ const windowsKeys = [
   ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ShiftRight'],
   ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ContextMenu', 'ControlRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'ArrowRight']
 ];
+
+
 
 // Mac key names for display
 const macKeyNames = {
@@ -45,9 +48,11 @@ const windowsKeyNames = {
   ArrowLeft: '←', ArrowUp: '↑', ArrowDown: '↓', ArrowRight: '→'
 };
 
+
 const KeyboardTester = ({ layout }) => {
   const [pressedKeys, setPressedKeys] = useState({});
   const [keyHistory, setKeyHistory] = useState([]);
+  const [testText, setTestText] = useState("Type here...");
 
   const handleKeyDown = (e) => {
     const key = e.code;
@@ -87,6 +92,7 @@ const KeyboardTester = ({ layout }) => {
     <div className="keyboard-container">
       <h2>{layout} Keyboard Tester</h2>
       <p>Note: If function keys (F1-F12) do not work, try holding the 'Fn' key while pressing them.</p>
+      
       <div className="keyboard">
         {keysLayout.map((row, rowIndex) => (
           <div key={rowIndex} className="key-row">
@@ -98,6 +104,18 @@ const KeyboardTester = ({ layout }) => {
           </div>
         ))}
       </div>
+
+      <div className="typing-test">
+        <h3>Typing Test</h3>
+        <textarea 
+          rows="4" 
+          cols="50" 
+          value={testText} 
+          onChange={(e) => setTestText(e.target.value)}
+          placeholder="Type here..."
+        />
+      </div>
+
       <div className="key-history">
         <h3>Key Press History</h3>
         <ul>
