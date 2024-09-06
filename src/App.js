@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import KeyboardTester from './components/KeyboardTester';
 import WelcomePage from './components/WelcomePage';
 import './App.css';
